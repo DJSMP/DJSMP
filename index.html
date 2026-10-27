@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJSMP | SMP • PvP</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080b12;color:white;font-family:Tahoma,Arial,sans-serif}
+header{text-align:center;padding:28px 15px;background:#101722;border-bottom:2px solid #00ff88}
+h1{font-size:38px;color:#00ff88;margin:0}
+p{color:#cbd5e1;line-height:1.9}
+.hero{text-align:center;padding:40px 18px}
+.ip{direction:ltr;color:#00ff88;border:1px solid #00ff88;border-radius:10px;padding:14px;margin:18px auto;max-width:350px;font-weight:bold}
+button{background:#00ff88;color:#07110b;border:0;padding:12px 18px;border-radius:8px;font-weight:bold;font-size:15px;cursor:pointer}
+section{max-width:850px;margin:auto;padding:20px 15px}
+.title{text-align:center;color:#00ff88}
+.ranks{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.card{background:#111925;border:1px solid #263746;border-radius:14px;text-align:center;padding:20px 12px}
+.card h3{color:#00ff88;font-size:23px}
+.price{margin:16px 0;font-weight:bold}
+footer{text-align:center;padding:25px;border-top:1px solid #263746;color:#94a3b8}
+a{color:#00ff88}
+</style>
+</head>
+<body>
+<header>
+<h1>DJSMP</h1>
+<p>SMP • PvP | سرور ماینکرفت تو!</p>
+</header>
+
+<div class="hero">
+<h2>به DJSMP خوش اومدی! ⚔️</h2>
+<p>بجنگ، پیشرفت کن و به بازیکن افسانه‌ای تبدیل شو.</p>
+<div class="ip" id="serverIP">djsmp.pfmc.ir</div>
+<button onclick="copyIP()">کپی آی‌پی سرور</button>
+</div>
+
+<section>
+<h2 class="title">💎 فروشگاه رنک‌ها</h2>
+<div class="ranks">
+<div class="card">
+<h3>VIP</h3>
+<p>شروع ماجراجویی ویژه</p>
+<div class="price">۵۰٬۰۰۰ تومان</div>
+<button onclick="order('VIP')">خرید VIP</button>
+</div>
+<div class="card">
+<h3>EPIC</h3>
+<p>امکانات ویژه‌تر</p>
+<div class="price">قیمت به‌زودی</div>
+<button onclick="order('EPIC')">سفارش Epic</button>
+</div>
+<div class="card">
+<h3>SPONSOR</h3>
+<p>حامی ویژه سرور</p>
+<div class="price">قیمت به‌زودی</div>
+<button onclick="order('SPONSOR')">سفارش Sponsor</button>
+</div>
+<div class="card">
+<h3>LEGEND</h3>
+<p>رنک بازیکنان افسانه‌ای</p>
+<div class="price">قیمت به‌زودی</div>
+<button onclick="order('LEGEND')">سفارش Legend</button>
+</div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h2 class="title">📢 ارتباط با ما</h2>
+<p>برای اخبار و پشتیبانی وارد دیسکورد شو.</p>
+<a href="https://discord.gg/MynXvBR8Q">ورود به Discord DJSMP</a>
+</section>
+
+<footer>DJSMP NETWORK © 2026</footer>
+
+<script>
+function copyIP(){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText('djsmp.pfmc.ir')
+      .then(()=>alert('آی‌پی کپی شد!'))
+      .catch(()=>alert('آی‌پی سرور: djsmp.pfmc.ir'));
+  }else{
+    alert('آی‌پی سرور: djsmp.pfmc.ir');
+  }
+}
+function order(rank){
+  alert('برای خرید '+rank+'، فعلاً از طریق دیسکورد با مدیریت هماهنگ کن. درگاه پرداخت هنوز متصل نشده است.');
+}
+</script>
+</body>
+</html>
+
